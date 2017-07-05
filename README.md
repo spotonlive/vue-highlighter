@@ -1,13 +1,13 @@
 # VueHighlighter
 
-[![npm](https://img.shields.io/npm/v/vue-highlighter.svg)](https://www.npmjs.com/package/vue-highlighter) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
+[![npm](https://img.shields.io/npm/v/@spotonmarketing/vue-highlighter.svg)](https://www.npmjs.com/package/@spotonmarketing/vue-highlighter) [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 > A Vue.js Plugin
 
 ## Installation
 
 ```bash
-npm install --save vue-highlighter
+npm install --save @spotonmarketing/vue-highlighter
 ```
 
 ## Usage
@@ -16,9 +16,9 @@ npm install --save vue-highlighter
 
 ```js
 import Vue from 'vue'
-import VueHighlighter from 'vue-highlighter'
+import VueHighlighter from '@spotonmarketing/vue-highlighter'
 // You need a specific loader for CSS files like https://github.com/webpack/css-loader
-import 'vue-highlighter/dist/vue-highlighter.css'
+import '@spotonmarketing/vue-highlighter/dist/@spotonmarketing/vue-highlighter.css'
 
 Vue.use(VueHighlighter)
 ```
@@ -28,12 +28,12 @@ Vue.use(VueHighlighter)
 ```html
 <!-- Include after Vue -->
 <!-- Local files -->
-<link rel="stylesheet" href="vue-highlighter/dist/vue-highlighter.css"></link>
-<script src="vue-highlighter/dist/vue-highlighter.js"></script>
+<link rel="stylesheet" href="@spotonmarketing/vue-highlighter/dist/@spotonmarketing/vue-highlighter.css"></link>
+<script src="@spotonmarketing/vue-highlighter/dist/@spotonmarketing/vue-highlighter.js"></script>
 
 <!-- From CDN -->
-<link rel="stylesheet" href="https://unpkg.com/vue-highlighter/dist/vue-highlighter.css"></link>
-<script src="https://unpkg.com/vue-highlighter"></script>
+<link rel="stylesheet" href="https://unpkg.com/@spotonmarketing/vue-highlighter/dist/@spotonmarketing/vue-highlighter.css"></link>
+<script src="https://unpkg.com/@spotonmarketing/vue-highlighter"></script>
 ```
 
 ## Development
