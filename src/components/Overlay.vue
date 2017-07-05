@@ -36,6 +36,10 @@
                 this.removeClass(el, 'highlight')
             },
 
+            removeAll() {
+                this.elements = []
+            },
+
             addClass(el, className) {
                 let classes = el.className.split(" ")
 
@@ -53,7 +57,7 @@
 
                 const index = classes.indexOf(className)
 
-                if (index > -1) {
+                if (index === -1) {
                     return
                 }
 

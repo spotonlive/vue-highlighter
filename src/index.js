@@ -14,6 +14,10 @@ function plugin (Vue) {
 
         removeElement(el) {
             vm.removeElement(el)
+        },
+
+        removeAll() {
+            vm.removeAll()
         }
     }
 }

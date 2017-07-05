@@ -1,13 +1,13 @@
 {
   "name": "@spotonmarketing/vue-highlighter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Highlight native html elements",
   "author": "Nikolaj Løvenhardt Petersen <nikolaj.lovenhardt@gmail.com>",
-  "main": "dist/vue-highlighter.common.js",
-  "module": "dist/vue-highlighter.esm.js",
-  "browser": "dist/vue-highlighter.js",
-  "unpkg": "dist/vue-highlighter.js",
-  "style": "dist/vue-highlighter.css",
+  "main": "dist/@spotonmarketing/vue-highlighter.common.js",
+  "module": "dist/@spotonmarketing/vue-highlighter.esm.js",
+  "browser": "dist/@spotonmarketing/vue-highlighter.js",
+  "unpkg": "dist/@spotonmarketing/vue-highlighter.js",
+  "style": "dist/@spotonmarketing/vue-highlighter.css",
   "files": [
     "dist",
     "src"
