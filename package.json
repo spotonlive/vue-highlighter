@@ -1,6 +1,6 @@
 {
   "name": "@spotonmarketing/vue-highlighter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Highlight native html elements",
   "author": "Nikolaj Løvenhardt Petersen <nikolaj.lovenhardt@gmail.com>",
   "main": "dist/@spotonmarketing/vue-highlighter.common.js",
