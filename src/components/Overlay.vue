@@ -1,5 +1,7 @@
 <template>
-    <div v-if="visible" class="highlight-overlay"></div>
+    <transition name="fade">
+        <div v-show="visible" class="highlight-overlay"></div>
+    </transition>
 </template>
 
 <script>
@@ -78,10 +80,24 @@
         top: 0;
         z-index: 5000;
         background-color: rgba(0, 0, 0, 0.7);
+
+        -webkit-transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -ms-transition: opacity .25s ease-in-out;
+        -o-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out;
+
     }
 
     .highlight {
         position: relative;
         z-index: 6000;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity 1s
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+        opacity: 0
     }
 </style>
