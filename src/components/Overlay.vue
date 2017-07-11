@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div v-show="visible" class="highlight-overlay"></div>
+        <div v-show="visible" class="highlight-overlay" :class="{dismissable: isDismissable}" @click="close()"></div>
     </transition>
 </template>
 
@@ -8,7 +8,8 @@
     export default {
         data() {
             return {
-                elements: []
+                elements: [],
+                isDismissable: true
             }
         },
 
@@ -19,6 +20,11 @@
         },
 
         methods: {
+            /**
+             * Highlight element
+             *
+             * @param el
+             */
             addElement(el) {
                 this.removeElement(el)
                 this.elements.push(el)
@@ -26,6 +32,11 @@
                 this.addClass(el, 'highlight')
             },
 
+            /**
+             * Un-highlight element
+             *
+             * @param el
+             */
             removeElement(el) {
                 const index = this.elements.indexOf(el)
 
@@ -38,10 +49,19 @@
                 this.removeClass(el, 'highlight')
             },
 
+            /**
+             * Un-highlight all elements
+             */
             removeAll() {
                 this.elements = []
             },
 
+            /**
+             * Append class to element
+             *
+             * @param el
+             * @param className
+             */
             addClass(el, className) {
                 let classes = el.className.split(" ")
 
@@ -54,6 +74,12 @@
                 el.className = classes.join(" ")
             },
 
+            /**
+             * Remove class from element
+             *
+             * @param el
+             * @param className
+             */
             removeClass(el, className) {
                 let classes = el.className.split(" ")
 
@@ -66,6 +92,24 @@
                 classes.splice(index, 1)
 
                 el.className = classes.join(" ")
+            },
+
+            /**
+             * Set 'dismissable' mode
+             */
+            setDismissable(isDismissable) {
+                this.isDismissable = isDismissable;
+            },
+
+            /**
+             * Close
+             */
+            close() {
+                if (!this.isDismissable) {
+                    return
+                }
+
+                this.removeAll()
             }
         }
     }
@@ -86,6 +130,10 @@
         -ms-transition: opacity .25s ease-in-out;
         -o-transition: opacity .25s ease-in-out;
         transition: opacity .25s ease-in-out;
+
+        &.dismissable {
+            cursor: pointer;
+        }
 
     }
 

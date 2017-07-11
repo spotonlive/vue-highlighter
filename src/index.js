@@ -18,6 +18,10 @@ function plugin (Vue) {
 
         removeAll() {
             vm.removeAll()
+        },
+
+        setDismissable(isDismissable) {
+            vm.setDismissable(isDismissable)
         }
     }
 }
